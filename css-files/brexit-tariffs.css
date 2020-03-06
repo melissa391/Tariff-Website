@@ -1,0 +1,778 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html, body {
+width: auto;
+height: auto;
+background-color: #95E7F0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+
+}
+
+/* Geochart */
+
+#geochart-colours {
+	height: 100%;
+	width: 100%;
+	z-index: auto;
+}
+
+
+/* Navigation Bar */
+
+nav#navigationBar {
+  width: 100%;
+	position: sticky;
+	z-index: 2;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28pt;
+	text-decoration: none;
+	color: #330099;
+	}
+
+.navElements  {
+	float: left;
+}
+
+.navElements li {
+  text-decoration: none;
+	font-size: 28pt;
+	margin-bottom: 10px;
+	width: auto;
+}
+
+.navElements li:active {
+  text-decoration: none;
+}
+
+.navElements, .title, .navElements li {
+  display: block;
+}
+
+a {
+	 text-decoration: none;
+}
+
+h1 a {
+	color: #003399;
+}
+
+li a {
+	color: white;
+}
+
+li a:active  {
+	color: white;
+	text-decoration: underline;
+}
+
+li a:hover  {
+	color: white;
+	background-color: #99C7CC;
+}
+
+
+/* Countdown */
+
+#countdown {
+	position: sticky;
+	z-index: 2;
+	margin-left: 20px;
+	color: #003399;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+
+/* Info Box */
+
+.info {
+	background-color: #FFCC00;
+	position: sticky;
+	z-index: 2;
+	margin-top: 40px;
+	margin-left: 98px;
+	border-radius: 5px;
+  word-wrap: break-word;
+	line-height: 150%;
+	width: 372px;
+}
+
+.info h3 {
+	padding: 18px;
+	color: #003399;
+	width: 170px;
+	font-weight: bold;
+}
+
+/* tarrif box */
+
+#tariffBox {
+	background-color: #FFCC00;
+	position: absolute;
+	z-index: 2;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	width: auto;
+}
+
+
+#tariffBox h3 {
+  padding-bottom: 20px;
+	color: #003399;
+	line-height: 120%;
+}
+
+.tab {
+ display: flex;
+ justify-content: space-between;
+}
+
+.tab button {
+	margin-bottom: 20px;
+  background-color: #003399;
+	color: white;
+	font-size: 13pt;
+	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
+	border-radius: 5px;
+  padding: 22px 28px;
+}
+
+.tab button:hover {
+	background-color: #99C7CC;
+  color: white;
+}
+
+
+button.active-page {
+	background-color: #FFCC00;
+	border: 2px solid #003399;
+	color: white;
+	outline: none;
+}
+
+
+#dropdown {
+	display: block;
+	margin-bottom: 20px;
+	width: 332px;
+}
+
+.showTariffs {
+	background-color: #003399;
+  color: white;
+  outline: none;
+	width: 332px;
+	border-radius: 5px;
+	font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+	font-size: 10pt;
+
+}
+
+.showTariffs:hover {
+	background-color: #99C7CC;
+}
+
+#result {
+  padding-top: 40px;
+  padding-bottom: 40px;
+	width: 332px;
+	word-wrap: break-word;
+	color: #003399;
+	line-height: 120%;
+}
+
+#alldata {
+	background-color: #003399;
+  color: white;
+  outline: none;
+	border-radius: 5px;
+	font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+	width: 332px;
+	font-size: 10pt;
+}
+
+#alldata:hover {
+	background-color: #99C7CC;
+	color: white;
+}
+
+
+#alldata:active {
+	background-color: #FFCC00;
+	border: 1px solid #003399;
+	color: white;
+	outline: none;
+}
+
+/* CSV */
+
+#csvcontent {
+	display: flex;
+  width: auto;
+	flex-wrap: wrap;
+}
+
+.section {
+	margin: 60px;
+}
+
+.subsection {
+  color: #003399;
+  line-height: 120%;
+}
+
+.subsection img {
+	margin-bottom: 20px;
+}
+
+#subsection1 h2 {
+  font-weight: bold;
+	margin-bottom: 10px;
+	font-size: 18pt;
+	line-height: 120%;
+}
+
+#section6 {
+  width: 136px;
+}
+
+
+/* QUIZ */
+
+li.active-nav-element {
+	border-bottom: 3px solid white;
+}
+
+.question {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  width: 332px;
+}
+
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.slide{
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+  height: 0;
+  overflow: hidden;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+  height: auto !important;
+}
+
+.quizAndResults {
+  background-color: #FFCC00;
+	position: relative;
+	margin-left: 98px;
+	margin-top: 40px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  width: 332px;
+	line-height: 120%;
+}
+
+.quizAndResults h2 {
+   font-size: 24pt;
+	 padding-bottom: 20px;
+	 color: #003399;
+}
+
+.quizContainer {
+  position: relative;
+  width: 332px;
+}
+
+.buttons {
+  background-color: #FFCC00;
+  outline: none;
+}
+
+#results {
+	margin-bottom: 20px;
+  background-color: #FFCC00;
+	color: #003399;
+}
+
+#quiz {
+  width: 332px;
+	color: #003399;
+}
+
+.buttons {
+	display: flex;
+  justify-content: space-between;
+	align-items: flex-start;
+}
+
+#next, #previous, #submit {
+  margin-bottom: 20px;
+	background-color: #003399;
+	color: white;
+	outline: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
+	font-size: 10pt;
+	padding: 11px;
+  width: 156px;
+}
+
+#goback {
+	background-color: #003399;
+	color: white;
+	outline: none;
+	width: 332px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
+	font-size: 10pt;
+  padding: 11px;
+}
+
+/* CSV PAGE */
+
+#data-title {
+	font-size: 18pt;
+	margin: 40px 20px;
+	color: #003399;
+}
+
+#asterix {
+	font-size: 13pt;
+	margin: 40px 20px;
+	color: #003399;
+}
+
+#asterix-home {
+	font-size: 10pt;
+  margin-top: 20px;
+	color: #003399;
+  word-wrap: break-word;
+	line-height: 130%;
+}
+
+/* ICONS */
+
+.icons #milk {
+	position: absolute;
+	z-index: 2;
+  margin-left: 625px;
+	margin-top: -10px;
+}
+
+.icons #eggs {
+	position: absolute;
+	z-index: 2;
+  margin-left: 665px;
+  top: 230px;
+}
+
+.icons #bread {
+	position: absolute;
+	z-index: 2;
+  margin-left: 630px;
+	margin-top: 20px;
+}
+
+.icons #bacon {
+	position: absolute;
+	z-index: 2;
+  margin-left: 680px;
+	top: 275px;
+}
+
+.icons #strawberry {
+	position: absolute;
+	z-index: 2;
+	margin-left: 590px;
+	top: 120px;
+}
+
+.icons #salmon {
+	position: absolute;
+	z-index: 2;
+  margin-left: 640px;
+	top: 155px;
+}
+
+.icons #butter {
+	position: absolute;
+	z-index: 2;
+	margin-left: 580px;
+	top: 210px;
+}
+
+.icons #lamb {
+	position: absolute;
+	z-index: 2;
+  margin-left: 600px;
+	top: 280px;
+}
+
+.icons #potato {
+	position: absolute;
+	z-index: 2;
+  margin-left: 555px;
+	top: 185px;
+}
+
+/* About */
+
+#about {
+	background-color: #FFCC00;
+	position: absolute;
+	z-index: 2;
+	margin-top: 40px;
+	margin-left: 20px;
+	padding: 20px 20px 40px 20px;
+	border-radius: 5px;
+	width: auto;
+}
+
+#about h3, #about p, #about ul {
+	width: 332px;
+	color: #003399;
+	line-height: 130%;
+	font-size: 13pt;
+	word-wrap: break-word;
+}
+
+#about h3 {
+	font-size: 18pt;
+}
+
+#about ul {
+	list-style-type: circle;
+	margin-left: 20px;
+}
+
+#about p a {
+	color: #003399;
+  text-decoration: underline;
+}
+
+
+#blue {
+	position: absolute;
+	top: 98px;
+	left: 500px;
+	height: 900px;
+}
+
+#blue-about {
+	position: absolute;
+	top: 98px;
+	left: 500px;
+	height: 900px;
+}
+
+/* Responsiveness */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+	.info {
+	 margin-left: 20px;
+   width: 205.41px;
+	}
+
+	.tab {
+	 width: 165.41px;
+	}
+
+	.tab button {
+    width: 78px;
+		padding: 4px 4px;
+		font-size: 10pt;
+		word-wrap: break-word;
+	}
+
+	#dropdown {
+		width: 165.41px;
+	}
+
+	.showTariffs {
+    width: 165.41px;
+	}
+
+	#result {
+		width: 165.41px;
+	}
+
+	#alldata {
+		width: 165.41px;
+	}
+
+	#tariffBox h3 {
+	  width: 165.41px;
+	}
+
+	.title {
+    font-size: 16pt;
+		margin-bottom: 20px;
+	}
+
+	.navElements li {
+	  text-decoration: none;
+		font-size: 14pt;
+	}
+
+	.quizAndResults {
+  	width: 165.41px;
+	}
+
+	#goback {
+	  width: 165.41px;
+	}
+
+	.question {
+	  width: 165.41px;
+	}
+
+	.quizAndResults {
+		margin-left: 20px;
+	}
+
+	.showTariffs {
+	 padding: 11px 0px;
+	}
+
+	#alldata {
+	 padding: 11px 0px;
+	}
+
+	#about h3, #about p, #about ul {
+		width: 165.41px;
+		font-size: 10pt;
+	}
+
+	#about h3 {
+		font-size: 13pt;
+	}
+
+
+
+	#blue {
+		height: 220px;
+		position: relative;
+    left: 20px;
+		top: 40px;
+	}
+
+	#blue-about {
+		height: 220px;
+		position: relative;
+		left: 20px;
+		top: 700px;
+	}
+
+	#asterix-home {
+  	width: 165.41px;
+	}
+
+}
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+	 .info {
+
+	 }
+
+	 .info h3 {
+	 	width: 332px;
+	 }
+
+
+	 #tariffBox {
+	 	margin-left: 98px;
+	 }
+
+	 .navElements, .title, .navElements li {
+     display: inline-block;
+  	}
+
+	.navElements {
+			float: right;
+			margin-bottom: 20px;
+		}
+
+	.navElements li {
+		margin-right: 40px;
+	}
+
+		.title {
+
+		}
+
+	#countdown {
+
+		display: block;
+	}
+
+	.tab button {
+		padding: 22px 28px;
+	}
+
+	#geochart-colours {
+		position: absolute;
+	  left: 150px;
+	  top: -20px;
+	  z-index: 1;
+		height: 100%;
+		width: 100%;
+	}
+
+	#about h3, #about p, #about ul {
+		width: 165.41px;
+		font-size: 10pt;
+	}
+
+ }
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+ 	#tariffBox {
+ 	margin-left: 98px;
+ 	}
+
+	.navElements, .title, .navElements li {
+		 display: inline-block;
+	 }
+
+
+	 .navElements {
+			 float: right;
+		 }
+
+	 #countdown {
+ 		display: block;
+ 	}
+
+	.navElements li {
+		margin-right: 40px;
+	}
+
+	#geochart-colours {
+		position: absolute;
+	  left: 150px;
+	  top: -20px;
+	  z-index: 1;
+		height: 100%;
+		width: 100%;
+	}
+	.tab button {
+		padding: 22px 28px;
+	}
+
+	.info {
+
+	}
+
+	.info h3 {
+	 width: 332px;
+	}
+
+
+	.showTariffs {
+	 padding: 11px 0px;
+  }
+
+	#alldata {
+	 padding: 11px 0px;
+	}
+
+	#about {
+		margin-left: 98px;
+	}
+
+	#about h3, #about p, #about ul {
+		width: 332px;
+		line-height: 130%;
+		font-size: 13pt;
+	}
+
+	#about h3 {
+		font-size: 18pt;
+	}
+
+ }

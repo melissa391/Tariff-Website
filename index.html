@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <meta charset="UTF8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Tariffs After Brexit
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js-files/csv.js"></script>
+    <script src="js-files/dropdown-options-before.js"></script>
+    <script src="js-files/countdown.js"></script>
+    <script src="js-files/countdown-two.js"></script>
+    <script src="js-files/geochart.js"></script>
+    <script src="js-files/move-images.js"></script>
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="css-files/brexit-tariffs.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+     <!-- GeoChart -->
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+ </head>
+
+ <body>
+   <!-- GeoChart -->
+   <script type="text/javascript">
+     google.charts.load('current', {
+       'packages':['geochart'],
+
+       'mapsApiKey': 'AIzaSyDkPluCGTDuXEy-7F5fhm4R_DgPGN2WfXU'
+     });
+     google.charts.setOnLoadCallback(drawRegionsMap);
+
+     function drawRegionsMap() {
+       var data = google.visualization.arrayToDataTable([
+         ['Country'],
+         ['United Kingdom'],
+         ['France'],
+         ['Belgium'],
+         ['Ireland'],
+         ['Netherlands'],
+         ['Spain'],
+         ['Sweden'],
+         ['Denmark'],
+         ['Portugal'],
+         ['Germany'],
+         ['Poland'],
+         ['Italy'],
+         ['Greece'],
+         ['Finland'],
+         ['Estonia'],
+         ['Hungary'],
+         ['Slovakia'],
+         ['Slovenia'],
+         ['Austria'],
+         ['Croatia'],
+         ['Romania'],
+         ['Bulgaria'],
+         ['Czech Republic'],
+         ['Latvia'],
+         ['Lithuania'],
+         ['Malta'],
+         ['Cyprus'],
+         ['Luxembourg'],
+       ]);
+
+       var options = {
+         region: '150',
+         colorAxis: {colors: '#003399'},
+         backgroundColor: '#95E7F0',
+         datalessRegionColor: '#99C7CC',
+         defaultColor: '#003399',
+       };
+
+       var chart = new google.visualization.GeoChart(document.getElementById('geochart-colours'));
+       chart.draw(data, options);
+     };
+   </script>
+
+
+
+   <!-- Navigation bar -->
+     <nav id="navigationBar">
+
+       <div class="title">
+         <h1><a href="index.html">Brexit and the Tariffs</a></h1>
+       </div>
+
+
+       <ul class="navElements">
+         <li><a href="quiz.html">Quiz</a></li>
+         <li><a href="about.html">About</a></li>
+       </ul>
+     </nav>
+
+   <!-- countdown Box -->
+   <div id="countdown"></div>
+
+   <!-- Info Box -->
+     <div class="info">
+       <h3>Select food items from the dropdown menu below to discover the trade tariffs before and after Brexit*</h3>
+     </div>
+
+
+   <!-- Tariff Box -->
+   <section id="tariffBox">
+
+     <div class="tab">
+       <button  class="active-page" id= "before" onclick="location.href='index.html'" type="button">Before Brexit</button>
+       <button id= "after" onclick="location.href='after-brexit.html'" type="button">After Brexit</button>
+     </div>
+
+
+       <select id="dropdown" name="food">
+         <option value="eggs">Eggs</option>
+         <option value="milk">Milk</option>
+         <option value="bacon">Bacon</option>
+         <option value="bread">Bread</option>
+         <option value="butter">Butter</option>
+         <option value="strawberries">Strawberries</option>
+         <option value="potatoes">Potatoes</option>
+         <option value="lamb">Lamb</option>
+         <option value="salmon">Salmon</option>
+      </select>
+
+      <button class="showTariffs" onclick="dropdownOutput(); resizeImage()";>Show me the Tariff</button>
+
+      <div id="result"></div>
+
+
+      <button id= "alldata" onclick="location.href='csv.html'" type="button">See all the Data</button>
+
+      <p id="asterix-home">*World Trade Organisation rates</p>
+
+
+   </section>
+
+
+
+   <!-- Geochart container -->
+    <div id="geochart-colours"></div>
+
+  <!-- Icons-->
+    <div class="icons">
+     <img id= "milk" src="images/no-background/milk.png" alt="milk">
+     <img id= "bread" src="images/no-background/bread.png" alt="bread">
+     <img id= "strawberry" src="images/no-background/strawberry.png" alt="strawberry">
+     <img id= "salmon" src="images/no-background/salmon.png" alt="salmon">
+     <img id= "eggs" src="images/no-background/egg.png" alt="eggs">
+     <img id= "bacon" src="images/no-background/bacon.png" alt="bacon">
+     <img id= "lamb" src="images/no-background/lamb.png" alt="lamb">
+     <img id= "potato" src="images/no-background/potato.png" alt="potato">
+     <img id= "butter" src="images/no-background/butter.png" alt="butter">
+   </div>
+
+  </body>
+</html>
